@@ -34,10 +34,10 @@ public class MapExercises {
         Map<String, Integer> map = new HashMap<>();
         int count = 0;
         for (String word : words) {
-            if (!map.containsKey(word)) {
+            if (!map.containsKey(word)) { // map中没有该元素，放入<word, 1>
                 count = 1;
                 map.put(word, count);
-            } else {
+            } else {   // 已有该元素，放入<word, count + 1>
                 count += 1;
                 map.replace(word, count);
             }
